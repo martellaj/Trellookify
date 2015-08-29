@@ -1,0 +1,35 @@
+body {
+	padding-top: 50px;
+}
+
+.center-block {
+	float: none !important
+}
+
+.a-little-padding {
+	padding-top: 5px;
+}
+
+.trello-header {
+	background-color: #0079BF; 
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #BCD9EA;
+}
+
+.btn-primary {
+	background-color: #0079BF;
+}
+
+* {
+  border-radius: 0 !important;
+}
+
+.text-danger {
+	color: #EB5A46;
+}
