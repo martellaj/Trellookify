@@ -19,7 +19,7 @@
   <FormSettings>
     <Form xsi:type="ItemEdit">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://localhost:8443/appcompose/index.html" />
+        <SourceLocation DefaultValue="https://martellaj.github.io/Trellookify/app/appcompose/index.html" />
       </DesktopSettings>
     </Form>
   </FormSettings>
