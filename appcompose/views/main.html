@@ -1,0 +1,31 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-6  col-md-4 center-block" ng-show="!main.isConnected && main.connectionAttempted">
+			<br />
+			<h4>Trello Report allows you to build text reports based on your Trello boards. Connect to get started!</h4>
+		</div>
+		<div class="col-xs-12 col-sm-6  col-md-4 center-block" ng-show="main.isConnected && !main.trelloBoards">
+			<br />
+			<h4>Getting your boards...</h4>
+		</div>
+		<div class="col-xs-12 col-sm-6  col-md-4 center-block" ng-show="main.isConnected && main.trelloBoards.length === 0">
+			<br />
+			<h4>Looks like you're not tracking any tasks right now... you have no open boards!</h4>
+		</div>
+		<div class="col-xs-12 col-sm-6  col-md-4 center-block" ng-show="main.isConnected && main.trelloBoards.length > 0">
+			<br />
+			<h4>Your boards</h4>
+			<accordion>
+				<accordion-group ng-repeat="board in main.trelloBoards" heading="{{ board.name }}" is-open="board.isOpen">
+					<div class="checkbox" ng-repeat="list in board.lists">
+						<label>
+							<input type="checkbox" ng-model="list.include" ng-change="main.listChecked(board.name, list)"> {{ list.name }}
+						</label>
+					</div>
+				</accordion-group>
+			</accordion>
+			<button class="btn btn-primary" ng-click="main.buildReport()">Build report</button>
+			<p class="text-danger a-little-padding" ng-show="main.error">{{ main.error }}</p>
+		</div>
+	</div>
+</div>
