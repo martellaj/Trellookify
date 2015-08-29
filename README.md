@@ -11,3 +11,8 @@ When you log in to Trello through the Add-in, you'll get a list of all your boar
 ## Feedback
 
 For any issues, comments, or general feedback, simply add an issue to the [Issues section](https://github.com/martellaj/Trellookify/issues) of this repository or contact me on [Twitter](http://www.twitter.com/martellaj).
+
+## Resources
+
+* For more information about Office Add-ins, check out [dev.office.com](http://dev.office.com/).
+* This app was built using the Office Add-in Yeoman generator. Check it out on [GitHub](https://github.com/OfficeDev/generator-office).
