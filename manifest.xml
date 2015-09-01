@@ -2,12 +2,14 @@
 <!--Created:cb85b80c-f585-40ff-8bfc-12ff4d0e34a9-->
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MailApp">
   <Id>089b0ed8-b949-4e72-a76b-6e4978dee0af</Id>
-  <Version>1.0.0.0</Version>
-  <ProviderName>Joe Martella</ProviderName>
+  <Version>1.0.0</Version>
+  <ProviderName>Joseph Martella</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Trellookify" />
   <Description DefaultValue="Quickly generate reports based on your Trello boards and add them into an email."/>
-  <IconUrl DefaultValue="https://i.imgur.com/VEgp3iX.png" />
+  <IconUrl DefaultValue="https://martellaj.github.io/Trellookify/images/appIcon.jpg" />
+  <HighResolutionIconUrl DefaultValue="https://martellaj.github.io/Trellookify/images/hiresIcon.png" />
+  <SupportUrl DefaultValue="https://github.com/martellaj/Trellookify/issues" />
   <Hosts>
     <Host Name="Mailbox" />
   </Hosts>
