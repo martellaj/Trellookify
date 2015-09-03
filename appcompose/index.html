@@ -24,18 +24,29 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-default nav-links navbar-fixed-top trello-header" ng-controller="NavbarController as nav">
-    <div class="container-fluid">
-      <ul class="nav navbar-nav">
-        <li>
-          <a href="" ng-click="nav.connect()" ng-hide="nav.isConnected">Connect to Trello or sign up</a>
-        </li>
-        <li>
-          <a href="" ng-click="nav.disconnect()" ng-show="nav.isConnected">Disconnect from Trello</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <div ng-controller="NavbarController as nav">
+    <nav class="navbar navbar-default nav-links navbar-fixed-top trello-header">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="" ng-click="nav.connect()" ng-hide="nav.isConnected">Connect to Trello or sign up</a>
+          </li>
+          <li>
+            <a href="" ng-click="nav.disconnect()" ng-show="nav.isConnected">Disconnect from Trello</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="navbar navbar-default nav-links ie-warning" ng-show="nav.isIE">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="http://www.trello.com" target="_blank">Looks like you're using IE. Sign in to Trello on their website before clicking the button here.</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
   <div class="container">
     <main>
       <div ng-view></div>

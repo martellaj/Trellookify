@@ -12,7 +12,8 @@
 		
 		// Properties
 		vm.isCollapsed;
-		vm.isConnected;		
+		vm.isConnected;
+		vm.isIE = false;		
 		
 		// Methods
 		vm.connect = connect;
@@ -20,6 +21,8 @@
 		
 		/////////////////////////////////////////
 		// End of exposed properties and methods.
+		
+		
 		
 		/**
 		 * This function does any initialization work the 
@@ -29,13 +32,15 @@
 			$log.debug('Activated NavbarController.');
 			vm.isCollapsed = true;
 
+			vm.isIE = /*@cc_on!@*/false || !!document.documentMode;   // At least IE6
+
 			// Try to connect with stored data (wait for page to load, 
 			// or listener won't update UI).
 			angular.element(document).ready(function () {
 				Office.initialize = function () {
-      		$log.debug('Activated Office.js.');
-    		};
-				
+					$log.debug('Activated Office.js.');
+				};
+
         trello.connectSilently();
 			});
 		})();

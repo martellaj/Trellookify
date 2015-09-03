@@ -14,6 +14,10 @@ body {
 	background-color: #0079BF; 
 }
 
+.ie-warning {
+	background-color: #EB5A46; 
+}
+
 .navbar-default .navbar-nav>li>a {
     color: white;
 }
